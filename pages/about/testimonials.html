@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials & Reviews - Phenom Outsourcing</title>
+    <meta name="description" content="Read what our clients say about Phenom. Real reviews from businesses worldwide who trust us for accounting outsourcing.">
+    
+    <link rel="stylesheet" href="/style.css">
+     <!-- FavIcon  -->
+    <link rel="icon" href="Logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .rating {
+            color: #fbbf24;
+            font-size: 1.25rem;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 3rem;
+            color: #4a90e2;
+            opacity: 0.1;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            background: var(--white);
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 500;
+        }
+        
+        .filter-tab:hover,
+        .filter-tab.active {
+            background: #4a90e2;
+            color: white;
+            border-color: #4a90e2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div id="header-placeholder"></div>
+
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/index.html"><i class="fa-solid fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="#">About Us</a>
+                <span class="separator">/</span>
+                <span class="current">Testimonials</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Client Success Stories</h1>
+            <p class="lead">Hear from businesses who transformed their accounting with Phenom</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                
+                <!-- Stats -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin: 3rem 0; text-align: center;">
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 700; color: #4a90e2;">1200+</div>
+                        <div style="color: var(--text-light);">Happy Clients</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 700; color: #4a90e2;">4.9/5</div>
+                        <div style="color: var(--text-light);">Average Rating</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 700; color: #4a90e2;">99%</div>
+                        <div style="color: var(--text-light);">Client Retention</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 700; color: #4a90e2;">14+</div>
+                        <div style="color: var(--text-light);">Years in Business</div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Reviews</button>
+                    <button class="filter-tab" data-filter="us">🇺🇸 USA</button>
+                    <button class="filter-tab" data-filter="uk">🇬🇧 UK</button>
+                    <button class="filter-tab" data-filter="canada">🇨🇦 Canada</button>
+                    <button class="filter-tab" data-filter="australia">🇦🇺 Australia</button>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div id="testimonialGrid">
+                    
+                    <div class="testimonial-card" data-country="us">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">JS</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">John Smith</h4>
+                                <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 0.25rem;">CEO, TechStart Inc.</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
+                            "Switching to Phenom was one of the best decisions we made. They saved us over $40,000 annually while improving the quality and timeliness of our financial reports. Their team is responsive, professional, and truly understands our business."
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">Bookkeeping</span>
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">Payroll</span>
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">Tax Prep</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card" data-country="uk">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">SW</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Sarah Williams</h4>
+                                <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 0.25rem;">Partner, Williams & Associates LLP</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
+                            "As a CPA firm, we needed reliable offshore support for our growing client base. Phenom has been exceptional. Their understanding of UK tax law, FRS 102, and MTD compliance is impressive. They've become an extension of our team."
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">UK Accounting</span>
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">VAT Returns</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card" data-country="canada">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">MP</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Michel Patel</h4>
+                                <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 0.25rem;">Owner, Maple Construction Ltd.</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
+                            "Job costing for construction is complex, but Phenom handles it perfectly. They understand our industry, manage WIP schedules, and provide insights that help us bid more accurately. Plus, their bilingual support (English/French) is a huge plus."
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">Job Costing</span>
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">GST/HST</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card" data-country="australia">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">EJ</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Emma Johnson</h4>
+                                <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 0.25rem;">Director, Sydney Health Clinic</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
+                            "The overnight turnaround is a game-changer. I send files at end of day, and they're processed by morning. BAS returns are always filed on time, and Single Touch Payroll is handled seamlessly. Couldn't be happier with the service."
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">BAS Returns</span>
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">STP Payroll</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card" data-country="us">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">RL</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Robert Lee</h4>
+                                <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 0.25rem;">CFO, E-Commerce Solutions LLC</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
+                            "Managing inventory across Shopify, Amazon, and eBay was a nightmare until Phenom took over. They reconcile everything perfectly, track COGS accurately, and provide weekly inventory reports. Our margins have improved thanks to their insights."
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">E-commerce</span>
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">Inventory</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card" data-country="uk">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">DM</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">David Miller</h4>
+                                <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 0.25rem;">MD, Miller Property Management</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
+                            "We manage 50+ properties, and Phenom handles all the accounting—rent collection tracking, maintenance expenses, landlord statements. They've automated so much of our process. Great value for money."
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">Property Management</span>
+                            <span style="padding: 0.25rem 0.75rem; background: var(--bg-light); border-radius: 15px; font-size: 0.75rem;">Landlord Reports</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Video Testimonials Section -->
+                <h2 style="text-align: center; margin: 4rem 0 2rem;">Video Testimonials</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0;">
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 0.5rem; text-align: center;">
+                        <div style="background: #4a90e2; height: 200px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: white; font-size: 3rem;">
+                            <i class="fa-solid fa-play-circle"></i>
+                        </div>
+                        <h4>Sarah's Story - UK Accounting Firm</h4>
+                        <p style="font-size: 0.875rem; color: var(--text-light);">How Phenom helped scale operations 300%</p>
+                        <!-- TODO: Replace with actual video embed -->
+                    </div>
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 0.5rem; text-align: center;">
+                        <div style="background: #4a90e2; height: 200px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: white; font-size: 3rem;">
+                            <i class="fa-solid fa-play-circle"></i>
+                        </div>
+                        <h4>John's Experience - Tech Startup</h4>
+                        <p style="font-size: 0.875rem; color: var(--text-light);">From chaos to clarity in 30 days</p>
+                        <!-- TODO: Replace with actual video embed -->
+                    </div>
+                </div>
+
+                <!-- External Reviews -->
+                <h2 style="text-align: center; margin: 4rem 0 2rem;">What Others Say About Us</h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 2rem 0;">
+                    <div style="background: var(--white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-md); text-align: center;">
+                        <i class="fa-brands fa-google" style="font-size: 3rem; color: #4285F4; margin-bottom: 1rem;"></i>
+                        <h3>Google Reviews</h3>
+                        <div style="font-size: 2rem; font-weight: 700; color: #4a90e2; margin: 0.5rem 0;">4.9/5</div>
+                        <div class="rating">★★★★★</div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Based on 250+ reviews</p>
+                    </div>
+                    <div style="background: var(--white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-md); text-align: center;">
+                        <i class="fa-solid fa-thumbs-up" style="font-size: 3rem; color: #00b67a; margin-bottom: 1rem;"></i>
+                        <h3>Trustpilot</h3>
+                        <div style="font-size: 2rem; font-weight: 700; color: #4a90e2; margin: 0.5rem 0;">4.8/5</div>
+                        <div class="rating">★★★★★</div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Based on 180+ reviews</p>
+                    </div>
+                    <div style="background: var(--white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-md); text-align: center;">
+                        <i class="fa-solid fa-briefcase" style="font-size: 3rem; color: #0077b5; margin-bottom: 1rem;"></i>
+                        <h3>Clutch.co</h3>
+                        <div style="font-size: 2rem; font-weight: 700; color: #4a90e2; margin: 0.5rem 0;">5.0/5</div>
+                        <div class="rating">★★★★★</div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Based on 45+ reviews</p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div style="background: linear-gradient(135deg, #4a90e2, #357abd); padding: 3rem; border-radius: 1rem; margin: 4rem 0; text-align: center; color: white;">
+                    <h2 style="color: white; margin-bottom: 1rem;">Join 1200+ Satisfied Clients</h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 2rem; opacity: 0.9;">
+                        Experience the Phenom difference for yourself
+                    </p>
+                    <button class="btn-large" onclick="openModal()" style="background: white; color: #4a90e2;">
+                        <i class="fa-solid fa-rocket"></i> Get Started Today
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Modal -->
+    <div id="enquiryModal" class="modal">
+        <!-- Your existing modal content -->
+    </div>
+
+    <!-- Load Header & Footer -->
+    <script src="../../script.js"></script>
+    <script>
+        // Load Header
+        fetch('../../includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Initialize after header loads
+                setTimeout(() => {
+                    if (typeof initMobileMenu === 'function') initMobileMenu();
+                    if (typeof initStickyHeader === 'function') initStickyHeader();
+                }, 100);
+            })
+            .catch(error => console.error('Header error:', error));
+
+        // Load Footer
+        fetch('../../includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Footer error:', error));
+    </script>
+</body>
+</html>

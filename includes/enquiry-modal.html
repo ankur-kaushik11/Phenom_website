@@ -1,0 +1,236 @@
+<!-- Enquiry Modal - Multi-Step Form -->
+<div id="enquiryModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+
+        <h2>
+            <i class="fa-solid fa-clipboard-list"></i>
+            Get a Free Consultation
+        </h2>
+
+        <!-- Form Steps Progress Indicator -->
+        <div class="form-steps">
+            <div class="step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">Personal Info</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">Business Details</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">Services</div>
+            </div>
+        </div>
+
+        <!-- Multi-Step Form -->
+        <form id="enquiryForm" action="https://formsubmit.co/info@phenomoutsourcing.com" method="POST">
+
+            <!-- Hidden Configuration Fields -->
+            <input type="hidden" name="_subject" value="🎉 New Enquiry from Phenom Outsourcing Website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_next" value="https://your-website.com/thank-you.html">
+            <input type="text" name="_honey" style="display:none">
+
+            <!-- STEP 1: Personal Information -->
+            <div class="form-step active" data-step="1">
+                <h3>Personal Information</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="floating-label">
+                            <input type="text" id="userName" name="name" placeholder=" " required>
+                            <label for="userName">Full Name</label>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="floating-label">
+                            <input type="email" id="userEmail" name="email" placeholder=" " required>
+                            <label for="userEmail">Email Address</label>
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="floating-label">
+                            <input type="tel" id="userPhone" name="phone" placeholder=" " required>
+                            <label for="userPhone">Phone Number</label>
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="floating-label">
+                            <select id="countrySelect" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Ireland">Ireland</option>
+                                <option value="UAE">UAE</option>
+                                <option value="India">India</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <label for="countrySelect">Country</label>
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="form-buttons">
+                    <button type="button" class="btn-next" onclick="nextStep()">
+                        Next <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2: Business Details -->
+            <div class="form-step" data-step="2">
+                <h3>Business Details</h3>
+
+                <div class="form-group">
+                    <div class="floating-label">
+                        <input type="text" id="businessName" name="business_name" placeholder=" " required>
+                        <label for="businessName">Business Name</label>
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="floating-label">
+                        <input type="url" id="websiteUrl" name="website" placeholder=" ">
+                        <label for="websiteUrl">Website URL (Optional)</label>
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="floating-label">
+                        <select id="businessType" name="business_type" required>
+                            <option value="">Select Business Type</option>
+                            <option value="Individual/Sole Proprietor">Individual/Sole Proprietor</option>
+                            <option value="Small Business (1-10 employees)">Small Business (1-10 employees)</option>
+                            <option value="Medium Business (11-50 employees)">Medium Business (11-50 employees)</option>
+                            <option value="Large Enterprise (50+ employees)">Large Enterprise (50+ employees)</option>
+                            <option value="Accounting Firm">Accounting Firm</option>
+                        </select>
+                        <label for="businessType">Business Type</label>
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="form-buttons">
+                    <button type="button" class="btn-prev" onclick="prevStep()">
+                        <i class="fa-solid fa-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" class="btn-next" onclick="nextStep()">
+                        Next <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Service Selection -->
+            <div class="form-step" data-step="3">
+                <h3>Services You're Interested In</h3>
+
+                <div class="checkbox-grid">
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="services" value="Bookkeeping Services">
+                        <div class="checkbox-content">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Bookkeeping</span>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="services" value="Payroll Services">
+                        <div class="checkbox-content">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <span>Payroll</span>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="services" value="Tax Preparation">
+                        <div class="checkbox-content">
+                            <i class="fa-solid fa-file-contract"></i>
+                            <span>Tax Preparation</span>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="services" value="Financial Reporting">
+                        <div class="checkbox-content">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Financial Reporting</span>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="services" value="Accounts Payable/Receivable">
+                        <div class="checkbox-content">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span>AP/AR Services</span>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="services" value="CFO Services">
+                        <div class="checkbox-content">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span>CFO Services</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-group" style="margin-top: 2rem;">
+                    <div class="floating-label">
+                        <textarea id="requirements" name="message" rows="4" placeholder=" "></textarea>
+                        <label for="requirements">Additional Requirements</label>
+                        <i class="fa-solid fa-message"></i>
+                    </div>
+                </div>
+
+                <!-- Captcha -->
+                <div class="captcha-container">
+                    <label class="captcha-checkbox">
+                        <input type="checkbox" id="captchaCheck" name="human_verification" value="verified" required>
+                        <span class="checkmark"></span>
+                        <span class="captcha-text">I'm not a robot</span>
+                    </label>
+                    <div class="captcha-logo">
+                        <i class="fa-solid fa-shield-halved"></i> reCAPTCHA
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="form-buttons">
+                    <button type="button" class="btn-prev" onclick="prevStep()">
+                        <i class="fa-solid fa-arrow-left"></i> Previous
+                    </button>
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Enquiry
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Success Animation -->
+        <div id="successAnimation" class="success-animation">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Thank You!</h3>
+            <p>Your enquiry has been submitted successfully. We'll get back to you shortly.</p>
+        </div>
+    </div>
+</div>

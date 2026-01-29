@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <footer class="main-footer">
+        <!-- Footer Addresses -->
+        <div class="footer-addresses">
+            <div class="container addresses-grid">
+                <div class="address-col">
+                    <h4><i class="fa-solid fa-location-dot"></i> Jaipur Office</h4>
+                </div>
+                <div class="address-col">
+                    <h4><i class="fa-solid fa-location-dot"></i> Mumbai Office</h4>
+                </div>
+                <div class="address-col">
+                    <h4><i class="fa-solid fa-location-dot"></i> Hyderabad Office</h4>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="copyright-bar">
+            <div class="container">
+                <p>© 2025 Phenom Outsourcing Services Pvt Ltd.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ENQUIRY MODAL -->
+    <div id="emailModal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:999999; align-items:center; justify-content:center;">
+        <div
+            style="background:white; padding:40px; border-radius:20px; max-width:500px; width:90%; position:relative; max-height:90vh; overflow-y:auto;">
+
+            <!-- Close Button -->
+            <button id="closeModalBtn" type="button"
+                style="position:absolute; top:15px; right:15px; background:#e74c3c; color:white; border:none; width:40px; height:40px; border-radius:50%; font-size:24px; cursor:pointer; font-weight:bold; line-height:1;">×</button>
+
+            <!-- Header -->
+            <div style="text-align:center; margin-bottom:30px;">
+                <div
+                    style="width:80px; height:80px; background:linear-gradient(135deg, #1E88E5, #7CB342); border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:40px;">
+                    📧</div>
+                <h2 style="margin:0 0 10px 0; color:#1a1a1a; font-size:28px;">Get in Touch</h2>
+                <p style="margin:0; color:#666; font-size:15px;">Fill the form and we'll email you within 24 hours</p>
+            </div>
+
+            <!-- FORM -->
+            <form id="contactForm" style="display:flex; flex-direction:column; gap:15px;">
+                <input type="text" id="contactName" name="name" placeholder="Your Name *" required
+                    style="padding:15px; border:2px solid #ddd; border-radius:10px; font-size:15px; width:100%; box-sizing:border-box; font-family:inherit;">
+
+                <input type="email" id="contactEmail" name="email" placeholder="Your Email *" required
+                    style="padding:15px; border:2px solid #ddd; border-radius:10px; font-size:15px; width:100%; box-sizing:border-box; font-family:inherit;">
+
+                <input type="tel" id="contactPhone" name="phone" placeholder="Your Phone *" required
+                    style="padding:15px; border:2px solid #ddd; border-radius:10px; font-size:15px; width:100%; box-sizing:border-box; font-family:inherit;">
+
+                <input type="text" id="contactBusiness" name="business" placeholder="Business Name (Optional)"
+                    style="padding:15px; border:2px solid #ddd; border-radius:10px; font-size:15px; width:100%; box-sizing:border-box; font-family:inherit;">
+
+                <textarea id="contactMessage" name="message" placeholder="Your Requirements *" required rows="4"
+                    style="padding:15px; border:2px solid #ddd; border-radius:10px; font-size:15px; width:100%; box-sizing:border-box; resize:vertical; font-family:inherit;"></textarea>
+
+                <button type="button" id="sendEmailBtn"
+                    style="background:linear-gradient(135deg, #1E88E5, #7CB342); color:white; border:none; padding:18px; border-radius:10px; font-size:18px; font-weight:bold; cursor:pointer; width:100%; transition:all 0.3s;">
+                    Send Enquiry 📨
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FLOATING QUOTE BUTTON -->
+    <div id="floatingQuoteBtn"
+        style="position:fixed; right:0; top:50%; transform:translateY(-50%); background:linear-gradient(135deg, #1E88E5, #7CB342); color:white; padding:20px 15px; border-radius:10px 0 0 10px; cursor:pointer; z-index:9998; box-shadow:-5px 5px 20px rgba(0,0,0,0.3); transition:all 0.3s;">
+        <div style="writing-mode:vertical-rl; font-weight:700; font-size:16px; letter-spacing:2px;">
+            <div style="font-size:24px; margin-bottom:10px;"></div>
+            <div>GET QUOTE</div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(30, 136, 229, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 20px rgba(30, 136, 229, 0);
+            }
+        }
+
+        #floatingQuoteBtn:hover {
+            padding-right: 25px;
+            box-shadow: -8px 8px 30px rgba(30, 136, 229, 0.6);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        #sendEmailBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(30, 136, 229, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            #floatingQuoteBtn {
+                writing-mode: horizontal-tb !important;
+                bottom: 80px !important;
+                top: auto !important;
+                right: 20px !important;
+                transform: none !important;
+                border-radius: 50px !important;
+                padding: 15px 25px !important;
+            }
+
+            #floatingQuoteBtn>div {
+                writing-mode: horizontal-tb !important;
+                display: flex !important;
+                flex-direction: row !important;
+                gap: 10px !important;
+                align-items: center !important;
+            }
+
+            #floatingQuoteBtn>div>div:first-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
